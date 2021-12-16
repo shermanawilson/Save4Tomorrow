@@ -1,0 +1,14 @@
+body {
+    color: deeppink;
+    background-color: darkgrey;
+}
+
+#mainDiv {
+    color: blue;
+    display: grid;
+    align-self: center;
+    justify-self: center;
+    height: 500px;
+    width: 500px;
+    font-size: 64px;
+}
