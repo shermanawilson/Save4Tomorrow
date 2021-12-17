@@ -48,8 +48,11 @@
         .buttonHome {
             height: 50px;
             width: 100px;
-            border-radius: 40%;
+            border-radius: 40px;
             background-color: #70cbff;
+            display: grid;
+            justify-content: center;
+            align-content: center;
         }
 
         .paragraphs{
@@ -58,6 +61,15 @@
             align-content: center;
             flex-direction: column;
             width: 350px;
+        }
+        #getStarted{
+            height: 50px;
+            width: 100px;
+            border-radius: 40px;
+            background-color: #70cbff;
+            display: grid;
+            justify-content: center;
+            align-content: center;
         }
     </style>
 </head>
@@ -73,6 +85,9 @@
 <div id="mainDiv">
     <h1>Saving's Never Been So Easy</h1>
 </div>
+<div>
+    <img src="/static/lightbulbsBlue.jpg" alt="lightbulbs">
+</div>
 <div class="paragraphs">
 <p>Have you ever wondered why you never have anything left from your paychecks? Or does it always seem like it’s just a
     waiting game until the next check, or it’s a picking game between which bills get paid this month because you just
@@ -87,12 +102,13 @@
     online, thus the idea to create this site came along! </p>
 <p>So how does it work?
     Considering taking on your finances is a big step, getting all the help you can is everything. On the resources
-    page, you’ll be able to find different links and videos for help with your fincial journey as well as additional
+    page, you’ll be able to find different links and videos for help with your financial journey as well as additional
     resources to learn more about savings challenges! To actually access the challenges you’ll want create an account to
     get started and then pick a challenge to go from there! </p>
 </div>
 <div class="buttonHome">
-    <a href="register.html">Get Started!</a>
+    <button id="getStarted"><a href="register.html">Get Started!</a></button>
+<!--    <a href="register.html">Get Started!</a>-->
 </div>
 
 </body>
