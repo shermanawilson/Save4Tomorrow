@@ -10,4 +10,8 @@ public class UserController {
         return "home";
     }
 
+    @GetMapping("/resources")
+    public String resourcesView() {
+        return "resources";
+    }
 }
