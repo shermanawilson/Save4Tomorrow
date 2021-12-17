@@ -22,4 +22,9 @@ public class UserController {
         model.addAttribute("user", new User());
         return "register";
     }
+
+    @GetMapping("/login")
+    public String loginView() {
+        return "login";
+    }
 }

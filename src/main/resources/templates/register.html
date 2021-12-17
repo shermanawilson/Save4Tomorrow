@@ -16,51 +16,58 @@
         body {
             background-color: whitesmoke;
         }
-    .container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        width: 100%;
-    }
-    #register {
-        padding-bottom: 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
 
-    form {
-        padding-top: 50px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        font-family: 'Manjari', sans-serif;
-    }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+        }
 
-    form > input {
-        border-radius: 50px;
-        background-color: #d0cfcf;
-        outline: none;
-        border: transparent;
-        padding-bottom: 10px;
+        #register {
+            padding-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        form {
+            padding-top: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Manjari', sans-serif;
+        }
+
+        form > input {
+            border-radius: 50px;
+            background-color: #d0cfcf;
+            outline: none;
+            border: transparent;
+            padding-bottom: 10px;
+            text-align: center;
+            align-items: center;
+            font-family: 'Satisfy', cursive;
 
 
-    }
-    h1 {
-        font-family: 'Satisfy', cursive;
-        font-size: 38px;
-    }
+        }
 
-    .btn {
-        margin-top: 15px;
-        font-family: 'Satisfy', cursive;
-        height: 25px;
-        width: 75px;
-        background-color: #7fcffd;
-    }
+        h1 {
+            font-family: 'Satisfy', cursive;
+            font-size: 38px;
+        }
+
+        .btn {
+            margin-top: 15px;
+            font-family: 'Satisfy', cursive;
+            height: 25px;
+            width: 75px;
+            background-color: #7fcffd;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -79,21 +86,21 @@
         <div id="register">
             <form th:action="@{/register}" method="POST" th:object="${user}">
                 <label for="firstName">First Name</label>
-                <input id="firstName" th:field="*{firstName}" />
+                <input id="firstName" th:field="*{firstName}"/>
 
                 <label for="lastName">Last Name</label>
-                <input id="lastName" th:field="*{lastName}" />
+                <input id="lastName" th:field="*{lastName}"/>
 
                 <label for="email">Email</label>
-                <input id="email" th:field="*{email}" />
+                <input id="email" th:field="*{email}"/>
 
                 <label for="username">Username</label>
-                <input id="username" th:field="*{username}" />
+                <input id="username" th:field="*{username}"/>
 
                 <label for="password">Password</label>
-                <input id="password" th:field="*{password}" />
+                <input id="password" th:field="*{password}"/>
 
-                <input class="btn" value="Get Started!" type="submit" />
+                <input class="btn" value="Get Started!" type="submit"/>
             </form>
         </div>
 
