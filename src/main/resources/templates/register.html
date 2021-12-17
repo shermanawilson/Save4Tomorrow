@@ -1,10 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Register</title>
+    <!--  Google Fonts Links  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manjari:wght@100&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <!--Styling-->
+    <style>
+        body {
+            background-color: whitesmoke;
+        }
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+    }
+    #register {
+        padding-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    form {
+        padding-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Manjari', sans-serif;
+    }
+
+    form > input {
+        border-radius: 50px;
+        background-color: #d0cfcf;
+        outline: none;
+        border: transparent;
+        padding-bottom: 10px;
+
+
+    }
+    h1 {
+        font-family: 'Satisfy', cursive;
+        font-size: 38px;
+    }
+
+    .btn {
+        margin-top: 15px;
+        font-family: 'Satisfy', cursive;
+        height: 25px;
+        width: 75px;
+        background-color: #7fcffd;
+    }
+    </style>
 </head>
 <body>
+<div class="container">
+    <nav>
+        <a href="home.html">Home</a>
+        <!--    <img src="/static/logo.jpg" alt="logo" height="75px" width="75px">-->
+        <!--    <ul>-->
+        <!--        <li>Home</li>-->
+        <!--        <li>Login</li>-->
+        <!--        <li>Register</li>-->
+        <!--    </ul>-->
+    </nav>
+    <div id="registerBody">
+        <h1>Register</h1>
+        <div id="register">
+            <form th:action="@{/register}" method="POST" th:object="${user}">
+                <label for="firstName">First Name</label>
+                <input id="firstName" th:field="*{firstName}" />
 
+                <label for="lastName">Last Name</label>
+                <input id="lastName" th:field="*{lastName}" />
+
+                <label for="email">Email</label>
+                <input id="email" th:field="*{email}" />
+
+                <label for="username">Username</label>
+                <input id="username" th:field="*{username}" />
+
+                <label for="password">Password</label>
+                <input id="password" th:field="*{password}" />
+
+                <input class="btn" value="Get Started!" type="submit" />
+            </form>
+        </div>
+
+    </div>
+</div>
 </body>
 </html>
