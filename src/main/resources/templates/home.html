@@ -17,18 +17,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Mr+De+Haviland&display=swap" rel="stylesheet">
     <!--<link rel="stylesheet" type="text/css" href="/static/style.css">-->
     <style>
+        * {
+            /*margin: 0;*/
+            padding: 0;
+        }
         body {
-            background-color: #e4f9ff;
+            background-color: #e8f4fa;
             display: flex;
             justify-content: center;
-            align-content: center;
+            align-items: center;
         }
 
         #mainDiv {
             display: grid;
             align-self: center;
             justify-self: center;
-            height: 500px;
             font-size: 30px;
             font-family: 'Mr De Haviland', cursive;
         }
@@ -40,76 +43,120 @@
 
         p {
             font-family: 'GFS Neohellenic', sans-serif;
-            display: grid;
-            align-content: center;
-            justify-content: center;
+            /*display: grid;*/
+            /*align-content: center;*/
+            /*justify-content: center;*/
         }
 
         .buttonHome {
             height: 50px;
-            width: 100px;
+            width: 150px;
             border-radius: 40px;
             background-color: #70cbff;
-            display: grid;
-            justify-content: center;
-            align-content: center;
-        }
-
-        .paragraphs{
             display: flex;
             justify-content: center;
-            align-content: center;
-            flex-direction: column;
-            width: 350px;
+            align-items: center;
         }
-        #getStarted{
+
+        .paragraphs {
+            display: flex;
+            /*justify-content: center;*/
+            /*align-content: center;*/
+            flex-direction: column;
+            width: 65%;
+            font-size: 24px;
+        }
+
+        #getStarted {
             height: 50px;
-            width: 100px;
+            width: 150px;
             border-radius: 40px;
             background-color: #70cbff;
+            /*display: grid;*/
+            /*justify-content: center;*/
+            /*align-content: center;*/
+            font-family: 'GFS Neohellenic', sans-serif;
+            font-size: 20px;
+        }
+
+        #getStarted > a {
+            color: black;
+            text-decoration: none;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+
+        }
+
+        #lightBulbs {
+            border-radius: 50px;
+        }
+
+        #bulbs {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #home {
             display: grid;
             justify-content: center;
-            align-content: center;
+            align-items: center;
+            height: 100vh;
         }
     </style>
 </head>
 <body>
 <nav>
-    <img src="/static/logo.jpg" alt="logo" height="75px" width="75px">
-    <ul>
-        <li>Resources</li>
-        <li>Register</li>
-        <li>Login</li>
-    </ul>
+<!--    <img src="/static/logo.jpg" alt="logo" height="75px" width="75px">-->
+<!--    <ul>-->
+<!--        <li>Resources</li>-->
+<!--        <li>Register</li>-->
+<!--        <li>Login</li>-->
+<!--    </ul>-->
 </nav>
-<div id="mainDiv">
-    <h1>Saving's Never Been So Easy</h1>
+<div id="home">
+    <div id="mainDiv">
+        <h1>Saving's Never Been So Easy</h1>
+    </div>
+    <div id="bulbs">
+        <img id="lightBulbs" src="https://images.pexels.com/photos/1036936/pexels-photo-1036936.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="light bulbs" height="400px" width="600px">
+    </div>
+    <div class="paragraphs">
+        <p>Have you ever wondered why you never have anything left from your paychecks? Or does it always seem like it’s
+            just a
+            waiting game until the next check, or it’s a picking game between which bills get paid this month because
+            you just
+            can’t afford to pay. Well if you’re anything like me, then we’re in the same boat and you may be asking
+            yourself how
+            to switch things up to take control of your finances.</p>
+        <p>Learning where my money goes and tracking it was the first step to my journey. Understanding this is a huge
+            part
+            because once you’re able to sit down and figure out what it is you’re spending your money on, then you’ll be
+            able to
+            figure out where you’re able to make cut backs and create opportunity for savings. </p>
+        <p>So what’s this website for?<br>
+            As a developer, I realized that there are not many online tools to help with savings challenges to track
+            your
+            progress. Theres plenty of options to get hands on books and PDF versions but I wanted something I could
+            fill out
+            online, thus the idea to create this site came along! </p>
+        <p>So how does it work?<br>
+            Considering taking on your finances is a big step, getting all the help you can is everything. On the
+            resources
+            page, you’ll be able to find different links and videos for help with your financial journey as well as
+            additional
+            resources to learn more about savings challenges! To actually access the challenges you’ll want create an
+            account to
+            get started and then pick a challenge to go from there! </p>
+    </div>
+    <div class="buttonHome">
+        <button id="getStarted"><a href="register.html">Get Started!</a></button>
+        <!--    <a href="register.html">Get Started!</a>-->
+    </div>
 </div>
-<div>
-    <img src="/static/lightbulbsBlue.jpg" alt="lightbulbs">
-</div>
-<div class="paragraphs">
-<p>Have you ever wondered why you never have anything left from your paychecks? Or does it always seem like it’s just a
-    waiting game until the next check, or it’s a picking game between which bills get paid this month because you just
-    can’t afford to pay. Well if you’re anything like me, then we’re in the same boat and you may be asking yourself how
-    to switch things up to take control of your finances.</p>
-<p>Learning where my money goes and tracking it was the first step to my journey. Understanding this is a huge part
-    because once you’re able to sit down and figure out what it is you’re spending your money on, then you’ll be able to
-    figure out where you’re able to make cut backs and create opportunity for savings. </p>
-<p>So what’s this website for?
-    As a developer, I realized that there are not many online tools to help with savings challenges to track your
-    progress. Theres plenty of options to get hands on books and PDF versions but I wanted something I could fill out
-    online, thus the idea to create this site came along! </p>
-<p>So how does it work?
-    Considering taking on your finances is a big step, getting all the help you can is everything. On the resources
-    page, you’ll be able to find different links and videos for help with your financial journey as well as additional
-    resources to learn more about savings challenges! To actually access the challenges you’ll want create an account to
-    get started and then pick a challenge to go from there! </p>
-</div>
-<div class="buttonHome">
-    <button id="getStarted"><a href="register.html">Get Started!</a></button>
-<!--    <a href="register.html">Get Started!</a>-->
-</div>
-
 </body>
 </html>
