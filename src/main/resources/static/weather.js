@@ -1,0 +1,1 @@
+const WEATHER_API_KEY = "af490826bd781f8c6df4775c5164833f\n";
