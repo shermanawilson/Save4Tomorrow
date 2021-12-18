@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
@@ -206,9 +206,9 @@
             get started and then pick a challenge to go from there! </p>
     </div>
     <div class="buttonHome">
-        <button id="getStarted"><a href="register.html">Get Started!</a></button>
+        <button id="getStarted"><a th:href="@{/register}">Get Started!</a></button>
     </div>
-    <a href="/register">Not Registered?</a>
+    <a th:href="@{/login}">Not Registered?</a>
 </div>
 </body>
 </html>

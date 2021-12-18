@@ -37,7 +37,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 //Login Configuration
                 .formLogin()
                 .loginPage("/login")
-                .defaultSuccessUrl("/challenges") // Savings Challenges Main Page
+                .defaultSuccessUrl("/challenges/main") // Savings Challenges Main Page
                 .permitAll() //Anyone can go to the login page
                 //Logout configuration
                 .and()
