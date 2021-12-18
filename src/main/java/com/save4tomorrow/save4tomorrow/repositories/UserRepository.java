@@ -1,4 +1,11 @@
 package com.save4tomorrow.save4tomorrow.repositories;
 
-public interface UserRepository {
+import com.save4tomorrow.save4tomorrow.models.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface UserRepository extends JpaRepository<User, Long> {
+
+    User getUsersById (String id);
+    User findByUsername (String username);
+
 }

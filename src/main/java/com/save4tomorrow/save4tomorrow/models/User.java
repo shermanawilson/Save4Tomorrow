@@ -43,4 +43,26 @@ public class User {
     @Setter
     private String password;
 
+    public User(User copy){
+
+        id = copy.id;
+        firstName = copy.firstName;
+        lastName = copy.lastName;
+        email = copy.email;
+        username = copy.username;
+        password = copy.password;
+
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                '}';
+    }
 }
