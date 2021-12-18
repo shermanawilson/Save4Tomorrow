@@ -43,6 +43,7 @@
             flex-direction: column;
             width: 100%;
             font-family: 'Manjari', sans-serif;
+            height: 100%;
         }
 
         input {
@@ -50,9 +51,17 @@
             background-color: #d0cfcf;
             outline: none;
             border: transparent;
-            padding-bottom: 10px;
+            padding-bottom: 15px;
             text-align: center;
             align-items: center;
+            margin: 50px;
+            height: 20px;
+            width: 200px;
+
+        }
+
+        label {
+            text-align: center;
         }
 
         #btn {
@@ -104,6 +113,11 @@
             width: 100px;
             /*background-color: #ff62fa;*/
         }
+
+        a {
+            text-decoration: none;
+            color: #7fcffd;
+        }
     </style>
 </head>
 <body>
@@ -116,7 +130,7 @@
         </div>
         <ul id="listItems">
             <li><a href="/home"></a>Home</li>
-            <li><a href="/login"></a>Login</li>
+            <li><a href="/login"></a>Resources</li>
             <li><a href="/register"></a>Register</li>
         </ul>
     </div>
@@ -140,6 +154,7 @@
             <input id="btn" type="submit" value="Login"/>
         </form>
     </div>
+    <a href="/register">Not Registered?</a>
 </div>
 </body>
 </html>
