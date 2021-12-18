@@ -1,8 +1,105 @@
 <!DOCTYPE html>
-<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Challenges Main</title>
+    <style>
+        #challengesBody {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .btn {
+            background-color: #92d1ff;
+            border-radius: 50px;
+            outline: none;
+            border: transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Open Sans Condensed', sans-serif;
+            width: 100px;
+            height: 45px;
+            font-size: 24px;
+
+        }
+
+        h1{
+            font-family: 'Marck Script', cursive;
+
+        }
+
+        h2 {
+            font-family: 'Open Sans Condensed', sans-serif;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        #challengesHeader {
+            margin-bottom: 50px;
+        }
+
+        #weekChallenge {
+            background-color: #fdcbf6;
+            width: 600px;
+            height: 100px;
+            border-radius: 50px;
+            margin-bottom: 50px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        #weatherChallenge{
+            background-color: #ffe6fd;
+            width: 600px;
+            height: 100px;
+            border-radius: 50px;
+            margin-bottom: 50px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        #noSpendChallenge {
+            background-color: #fdcbf6;
+            width: 600px;
+            height: 100px;
+            border-radius: 50px;
+            margin-bottom: 50px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        #bingoChallenge {
+            background-color: #ffe6fd;
+            width: 600px;
+            height: 100px;
+            border-radius: 50px;
+            margin-bottom: 50px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        #title {
+            font-size: 48px;
+        }
+    </style>
+
+    <!--  Google Fonts   -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+
 </head>
 <body>
 <li>
@@ -11,4 +108,26 @@
     </form>
 </li>
 </body>
+<div id="challengesBody">
+    <div id="challengesHeader">
+        <h1 id="title">Savings Challenges</h1>
+        <h2>This is the fun part! Pick a challenge below to kick start your savings journey!</h2>
+    </div>
+    <div id="weekChallenge">
+        <h1>52 Week Challenge</h1>
+        <button class="btn">Start</button>
+    </div>
+    <div id="weatherChallenge">
+        <h1>Weather Challenge</h1>
+        <button class="btn">Start</button>
+    </div>
+    <div id="noSpendChallenge">
+        <h1>No Spend Challenge</h1>
+        <button class="btn">Start</button>
+    </div>
+    <div id="bingoChallenge">
+        <h1>Money Saving Bingo</h1>
+        <button class="btn">Start</button>
+    </div>
+</div>
 </html>

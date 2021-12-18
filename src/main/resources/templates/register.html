@@ -112,14 +112,14 @@
     <nav>
         <div id="navigationBody">
             <div class="logo">
-                <a href="#">
+                <a th:href="@{/home}">
                     <img src="/logo.jpg" alt="logo" height="100px" width="150px">
                 </a>
             </div>
             <ul id="listItems">
-                <li><a href="/home"></a>Home</li>
-                <li><a href="/login"></a>Login</li>
-                <li><a href="/register"></a>Resources</li>
+                <li><a th:href="@{/home}"></a>Home</li>
+                <li><a th:href="@{/login}"></a>Login</li>
+                <li><a th:href="@{/resources}"></a>Resources</li>
             </ul>
         </div>
     </nav>
