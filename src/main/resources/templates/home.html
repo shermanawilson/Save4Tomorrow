@@ -21,6 +21,7 @@
             /*margin: 0;*/
             padding: 0;
         }
+
         body {
             background-color: #fafaff;
             display: flex;
@@ -107,6 +108,7 @@
             justify-content: center;
             align-items: center;
         }
+
         #home {
             display: grid;
             justify-content: center;
@@ -114,23 +116,63 @@
             height: 100vh;
             text-align: center;
         }
+
+        /* Nav Bar */
+        #listItems {
+            list-style: none;
+            font-family: 'Poiret One', cursive;
+            display: flex;
+            width: 35%;
+            justify-content: space-around;
+            /*background-color: #d0cfcf;*/
+            letter-spacing: 2px;
+            font-size: 18px;
+
+        }
+
+        #navigationBody {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            min-height: 10vh;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            /*background-color: #7fcffd;*/
+            cursor: pointer;
+        }
+
+        .logo {
+            height: 100px;
+            width: 100px;
+            /*background-color: #ff62fa;*/
+        }
     </style>
 </head>
 <body>
-<nav>
-<!--    <img src="/static/logo.jpg" alt="logo" height="75px" width="75px">-->
-<!--    <ul>-->
-<!--        <li>Resources</li>-->
-<!--        <li>Register</li>-->
-<!--        <li>Login</li>-->
-<!--    </ul>-->
-</nav>
 <div id="home">
+    <nav>
+        <div id="navigationBody">
+            <div class="logo">
+                <a href="#">
+                    <img src="https://images.pexels.com/photos/3332510/pexels-photo-3332510.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                         alt="logo" height="100px" width="150px">
+                </a>
+            </div>
+            <ul id="listItems">
+                <li><a href="/home"></a>Home</li>
+                <li><a href="/login"></a>Login</li>
+                <li><a href="/register"></a>Register</li>
+            </ul>
+        </div>
+    </nav>
     <div id="mainDiv">
         <h1>Saving's Never Been So Easy</h1>
     </div>
     <div id="bulbs">
-        <img id="lightBulbs" src="https://images.pexels.com/photos/1036936/pexels-photo-1036936.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="light bulbs" height="400px" width="600px">
+        <img id="lightBulbs"
+             src="https://images.pexels.com/photos/1036936/pexels-photo-1036936.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
+             alt="light bulbs" height="400px" width="600px">
     </div>
     <div class="paragraphs">
         <p>Have you ever wondered why you never have anything left from your paychecks? Or does it always seem like it’s

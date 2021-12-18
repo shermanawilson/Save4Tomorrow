@@ -6,6 +6,10 @@
     <!--  Google Fonts Links  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manjari:wght@100&display=swap" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -68,18 +72,52 @@
             background-color: #7fcffd;
             cursor: pointer;
         }
+
+        #listItems {
+            list-style: none;
+            font-family: 'Poiret One', cursive;
+            display: flex;
+            width: 35%;
+            justify-content: space-around;
+            /*background-color: #d0cfcf;*/
+            letter-spacing: 2px;
+            font-size: 18px;
+
+        }
+
+        #navigationBody {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            min-height: 10vh;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            /*background-color: #7fcffd;*/
+        }
+
+        .logo {
+            height: 100px;
+            width: 100px;
+            /*background-color: #ff62fa;*/
+        }
     </style>
 </head>
 <body>
 <div class="container">
     <nav>
-        <a href="home.html">Home</a>
-        <!--    <img src="/static/logo.jpg" alt="logo" height="75px" width="75px">-->
-        <!--    <ul>-->
-        <!--        <li>Home</li>-->
-        <!--        <li>Login</li>-->
-        <!--        <li>Register</li>-->
-        <!--    </ul>-->
+        <div id="navigationBody">
+            <div class="logo">
+                <a href="#">
+                    <img src="https://images.pexels.com/photos/3332510/pexels-photo-3332510.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="logo" height="100px" width="150px">
+                </a>
+            </div>
+            <ul id="listItems">
+                <li><a href="/home"></a>Home</li>
+                <li><a href="/login"></a>Login</li>
+                <li><a href="/register"></a>Register</li>
+            </ul>
+        </div>
     </nav>
     <div id="registerBody">
         <h1>Register</h1>

@@ -27,4 +27,9 @@ public class UserController {
     public String loginView() {
         return "login";
     }
+
+    @GetMapping("/navbar")
+    public String viewNavbar() {
+        return "navbar";
+    }
 }
