@@ -9,4 +9,24 @@ public class ChallengesController {
     public String mainChallengesView() {
         return "challenges";
     }
+
+    @GetMapping("/challenges/52Week")
+    public String fWeekChallengeView() {
+        return "52week";
+    }
+
+    @GetMapping("/challenges/weather")
+    public String weatherChallengeView() {
+        return "weather";
+    }
+
+    @GetMapping("/challenges/noSpend")
+    public String noSpendChallengeView() {
+        return "nospend";
+    }
+
+    @GetMapping("/challenges/bingo")
+    public String bingoChallengeView() {
+        return "bingo";
+    }
 }
