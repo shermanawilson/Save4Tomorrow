@@ -123,6 +123,18 @@
             font-family: 'Sen', sans-serif;
         }
 
+        #logout {
+            outline: none;
+            border: transparent;
+            background-color: white;
+            font-family: 'Poiret One', cursive;
+            font-size: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 0;
+        }
+
     </style>
 </head>
 <body>
@@ -135,9 +147,11 @@
             </a>
         </div>
         <ul id="listItems">
+            <li><a th:href="@{/challenges/main}">Challenges</a></li>
             <li><a th:href="@{/resources}">Resources</a></li>
-            <li><a th:href="@{/login}">Login</a></li>
-            <li><a th:href="@{/register}">Register</a></li>
+            <li><form th:action="@{/logout}" th:method="post">
+                <button id="logout" class="btn-link btn">Logout</button>
+            </form></li>
         </ul>
     </div>
 </nav>

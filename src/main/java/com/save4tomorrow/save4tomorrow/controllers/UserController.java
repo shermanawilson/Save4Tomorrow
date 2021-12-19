@@ -54,4 +54,12 @@ public class UserController {
     public String viewNavbar() {
         return "navbar";
     }
+
+    @GetMapping("/profile")
+    public String viewProfile() {
+        return "profile";
+    }
 }
+
+
+

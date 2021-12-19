@@ -27,7 +27,7 @@
 
         }
 
-        h1{
+        h1 {
             font-family: 'Marck Script', cursive;
 
         }
@@ -53,7 +53,7 @@
             align-items: center;
         }
 
-        #weatherChallenge{
+        #weatherChallenge {
             background-color: #ffe6fd;
             width: 600px;
             height: 100px;
@@ -115,19 +115,27 @@
     </div>
     <div id="weekChallenge">
         <h1>52 Week Challenge</h1>
-        <button class="btn">Start</button>
+        <form th:action="@{/challenges/52Week}" th:method="post">
+            <button class="btn">Start</button>
+        </form>
     </div>
     <div id="weatherChallenge">
         <h1>Weather Challenge</h1>
-        <button class="btn">Start</button>
+        <form th:action="@{/challenges/weather}" th:method="post">
+            <button class="btn">Start</button>
+        </form>
     </div>
     <div id="noSpendChallenge">
         <h1>No Spend Challenge</h1>
-        <button class="btn">Start</button>
+        <form th:action="@{/challenges/noSpend}" th:method="post">
+            <button class="btn">Start</button>
+        </form>
     </div>
     <div id="bingoChallenge">
         <h1>Money Saving Bingo</h1>
-        <button class="btn">Start</button>
+        <form th:action="@{/challenges/bingo}" th:method="post">
+            <button class="btn">Start</button>
+        </form>
     </div>
 </div>
 </html>
