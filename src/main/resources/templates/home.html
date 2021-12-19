@@ -93,6 +93,10 @@
             color: black;
             text-decoration: none;
         }
+        #listItems a {
+            color: black;
+            text-decoration: none;
+        }
 
         nav {
             display: flex;
@@ -168,9 +172,9 @@
                 </a>
             </div>
             <ul id="listItems">
-                <li><a href="/home"></a>Home</li>
-                <li><a href="/login"></a>Login</li>
-                <li><a href="/register"></a>Register</li>
+                <li><a th:href="@{/resources}">Resources</a></li>
+                <li><a th:href="@{/login}">Login</a></li>
+                <li><a th:href="@{/register}">Register</a></li>
             </ul>
         </div>
     </nav>
