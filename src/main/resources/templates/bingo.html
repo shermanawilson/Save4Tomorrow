@@ -3,8 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <title>Money Saving Bingo</title>
+    <!--  Google Fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sen&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+
+    <style>
+        #bingoBody {
+            /*background-color: #329c9c;*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #bingoHeader {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #bingoHeader h1 {
+            font-family: 'Satisfy', cursive;
+            font-size: 48px;
+        }
+
+        #bingoHeader p {
+            font-family: 'Sen', sans-serif;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #bingoBoard {
+            background-color: #ededed;
+            width: 800px;
+            height: 800px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .bingoTile {
+            background-color: #c4c4c4;
+            margin: 10px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Sen', sans-serif;
+
+
+        }
+
+        .bingoTileWhole {
+
+            /*width: 50px;*/
+            /*height: 50px;*/
+            display: grid;
+            grid-template-columns: 150px 150px 150px 150px 150px;
+            grid-template-rows: 150px 150px 150px 150px 150px;
+        }
+
+        #bingoP {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 70%;
+            margin-bottom: 50px;
+        }
+        /* Nav Bar */
+
+        #listItems {
+            list-style: none;
+            font-family: 'Poiret One', cursive;
+            display: flex;
+            width: 35%;
+            justify-content: space-around;
+            /*background-color: #d0cfcf;*/
+            letter-spacing: 2px;
+            font-size: 18px;
+            cursor: pointer;
+
+        }
+
+        #navigationBody {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            min-height: 10vh;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            /*background-color: #7fcffd;*/
+            width: 100vw;
+
+        }
+
+        .logo {
+            height: 100px;
+            width: 100px;
+            /*background-color: #ff62fa;*/
+        }
+
+        #listItems a {
+            color: black;
+            text-decoration: none;
+        }
+        h1 {
+            font-family: 'Sen', sans-serif;
+        }
+
+    </style>
 </head>
 <body>
+<nav>
+    <div id="navigationBody">
+        <div class="logo">
+            <a href="#">
+                <img src="/logo.jpg"
+                     alt="logo" height="100px" width="150px">
+            </a>
+        </div>
+        <ul id="listItems">
+            <li><a th:href="@{/resources}">Resources</a></li>
+            <li><a th:href="@{/login}">Login</a></li>
+            <li><a th:href="@{/register}">Register</a></li>
+        </ul>
+    </div>
+</nav>
+<div id="bingoBody">
+    <div id="bingoHeader">
+        <h1>Money Saving Blackout Bingo</h1>
+        <div id="bingoP">
+            <img src="https://img.icons8.com/external-justicon-lineal-justicon/64/000000/external-lottery-gambling-justicon-lineal-justicon.png" alt="bing icon" style="margin-right: 50px">
+            <p>The Money Saving Blackout Bingo Challenge is a favorite because who doesn’t love bingo! The name of the
+                game
+                here is to each [day, week or month] save whatever the amount is on the card you chose!
+                Once you click on the amount you want you won’t be able to select that one anymore.
+                Once you’re done your total amount saved will display at the bottom!</p>
+        </div>
+    </div>
+    <div id="bingoBoard">
+        <div class="bingoTileWhole">
+            <h1 class="bingoTile">$52</h1>
+            <h1 class="bingoTile">$52</h1>
+            <h1 class="bingoTile">$52</h1>
+            <h1 class="bingoTile">$52</h1>
+            <h1 class="bingoTile">$52</h1>
 
+            <h1 class="bingoTile">$52</h1>
+            <h1 class="bingoTile">$52</h1>
+            <h1 class="bingoTile">$52</h1>
+            <h1 class="bingoTile">$52</h1>
+            <h1 class="bingoTile">$52</h1>
+
+            <h1 class="bingoTile">$52</h1>
+            <h1 class="bingoTile">$52</h1>
+            <h1 class="bingoTile">Free</h1>
+            <h1 class="bingoTile">$52</h1>
+            <h1 class="bingoTile">$52</h1>
+
+            <h1 class="bingoTile">$52</h1>
+            <h1 class="bingoTile">$52</h1>
+            <h1 class="bingoTile">$52</h1>
+            <h1 class="bingoTile">$52</h1>
+            <h1 class="bingoTile">$52</h1>
+
+            <h1 class="bingoTile">$52</h1>
+            <h1 class="bingoTile">$52</h1>
+            <h1 class="bingoTile">$52</h1>
+            <h1 class="bingoTile">$52</h1>
+            <h1 class="bingoTile">$52</h1>
+
+
+        </div>
+    </div>
+    <h1>Total Saved: $52</h1>
+</div>
 </body>
 </html>
