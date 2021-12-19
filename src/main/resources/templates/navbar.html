@@ -1,59 +1,75 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
 
 
-  <style>
+    <style>
 
-    body {
-      background-color: #fff4f4;
-    }
-    #listItems {
-      list-style: none;
-      font-family: 'Poiret One', cursive;
-      display: flex;
-      width: 35%;
-      justify-content: space-around;
-      /*background-color: #d0cfcf;*/
-      letter-spacing: 2px;
-      font-size: 18px;
+        body {
+            background-color: #fff4f4;
+        }
 
-    }
+        #listItems {
+            list-style: none;
+            font-family: 'Poiret One', cursive;
+            display: flex;
+            width: 35%;
+            justify-content: space-around;
+            /*background-color: #d0cfcf;*/
+            letter-spacing: 2px;
+            font-size: 18px;
 
-    #navigationBody {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      min-height: 10vh;
-      padding: 0;
-      margin: 0;
-      box-sizing: border-box;
-      /*background-color: #7fcffd;*/
-    }
+        }
 
-    .logo {
-      height: 100px;
-      width: 100px;
-      /*background-color: #ff62fa;*/
-    }
-  </style>
+        #navigationBody {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            min-height: 10vh;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            /*background-color: #7fcffd;*/
+        }
+
+        .logo {
+            height: 100px;
+            width: 100px;
+            /*background-color: #ff62fa;*/
+        }
+    </style>
 </head>
 <body>
 <nav>
-  <div id="navigationBody">
-    <div class="logo">
-      <a href="#">
-        <img src="/logo.jpg" alt="logo" height="100px" width="150px">
-      </a>
+    <!--  <div id="navigationBody">-->
+    <!--    <div class="logo">-->
+    <!--      <a href="#">-->
+    <!--        <img src="/logo.jpg" alt="logo" height="100px" width="150px">-->
+    <!--      </a>-->
+    <!--    </div>-->
+    <!--    <ul id="listItems">-->
+    <!--      <li><a href="/home"></a>Home</li>-->
+    <!--      <li><a href="/login"></a>Login</li>-->
+    <!--      <li><a href="/register"></a>Register</li>-->
+    <!--    </ul>-->
+    <!--  </div>-->
+    <div id="navigationBody">
+        <div class="logo">
+            <a href="#">
+                <img src="/logo.jpg" alt="logo" height="100px" width="150px">
+            </a>
+        </div>
+        <ul id="listItems">
+            <li><a th:href="@{/home}">Home</a></li>
+            <li><a th:href="@{/resources}">Resources</a></li>
+            <li><a th:href="@{/profile}">Profile</a></li>
+            <li><form th:action="@{/logout}" th:method="post">
+                <button id="logout" class="btn-link btn">Logout</button>
+            </form></li>
+        </ul>
     </div>
-    <ul id="listItems">
-      <li><a href="/home"></a>Home</li>
-      <li><a href="/login"></a>Login</li>
-      <li><a href="/register"></a>Register</li>
-    </ul>
-  </div>
 </nav>
 </body>
 

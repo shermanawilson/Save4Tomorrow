@@ -89,9 +89,72 @@
         #title {
             font-size: 48px;
         }
+
+        li {
+            list-style: none;
+        }
+
+        /*!* Nav Bar *!*/
+
+        /*#listItems {*/
+        /*    list-style: none;*/
+        /*    font-family: 'Poiret One', cursive;*/
+        /*    display: flex;*/
+        /*    width: 35%;*/
+        /*    justify-content: space-around;*/
+        /*    !*background-color: #d0cfcf;*!*/
+        /*    letter-spacing: 2px;*/
+        /*    font-size: 18px;*/
+        /*    cursor: pointer;*/
+
+        /*}*/
+
+        /*#navigationBody {*/
+        /*    display: flex;*/
+        /*    justify-content: space-around;*/
+        /*    align-items: center;*/
+        /*    min-height: 10vh;*/
+        /*    padding: 0;*/
+        /*    margin: 0;*/
+        /*    box-sizing: border-box;*/
+        /*    !*background-color: #7fcffd;*!*/
+        /*    width: 100vw;*/
+
+        /*}*/
+
+        /*.logo {*/
+        /*    height: 100px;*/
+        /*    width: 100px;*/
+        /*    !*background-color: #ff62fa;*!*/
+        /*}*/
+
+        /*#listItems a {*/
+        /*    color: black;*/
+        /*    text-decoration: none;*/
+        /*}*/
+
+        /*h1 {*/
+        /*    font-family: 'Sen', sans-serif;*/
+        /*}*/
+
+        /*#logout {*/
+        /*    outline: none;*/
+        /*    border: transparent;*/
+        /*    background-color: white;*/
+        /*    font-family: 'Poiret One', cursive;*/
+        /*    font-size: 18px;*/
+        /*    display: flex;*/
+        /*    justify-content: center;*/
+        /*    align-items: center;*/
+        /*    margin-top: 0;*/
+        /*}*/
     </style>
 
     <!--  Google Fonts   -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
@@ -102,12 +165,30 @@
 
 </head>
 <body>
-<li>
-    <form th:action="@{/logout}" th:method="post">
-        <button class="btn-link btn" style="margin-top: 8px">Logout</button>
-    </form>
-</li>
-</body>
+<!--<li>-->
+<!--    <form th:action="@{/logout}" th:method="post">-->
+<!--        <button class="btn-link btn" style="margin-top: 8px">Logout</button>-->
+<!--    </form>-->
+<!--</li>-->
+<nav>
+    <div id="navigationBody">
+        <div class="logo">
+            <a th:href="@{/home}">
+                <img src="/logo.jpg" alt="logo" height="100px" width="150px">
+            </a>
+        </div>
+        <ul id="listItems">
+            <li><a th:href="@{/home}">Home</a></li>
+            <li><a th:href="@{/resources}">Resources</a></li>
+            <li><a th:href="@{/profile}">Profile</a></li>
+            <li>
+                <form th:action="@{/logout}" th:method="post">
+                    <button id="logout" class="btn-link btn">Logout</button>
+                </form>
+            </li>
+        </ul>
+    </div>
+</nav>
 <div id="challengesBody">
     <div id="challengesHeader">
         <h1 id="title">Savings Challenges</h1>
@@ -138,4 +219,5 @@
         </form>
     </div>
 </div>
+</body>
 </html>
