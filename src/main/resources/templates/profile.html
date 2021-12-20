@@ -1,9 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Profile</title>
     <!--  Google Fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
@@ -51,6 +59,7 @@
             color: black;
             text-decoration: none;
         }
+
         h1 {
             font-family: 'Sen', sans-serif;
         }
@@ -66,6 +75,43 @@
             align-items: center;
             margin-top: 0;
         }
+
+        #profileHeader h1 {
+            font-size: 48px;
+            font-family: 'Satisfy', cursive;
+        }
+
+        #profileBody {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #profileInfo {
+            display: grid;
+            grid-template-columns: 3fr 3fr;
+            grid-template-rows: 3fr 3fr;
+        }
+
+        #profileInfo h1 {
+            font-family: 'Quicksand', sans-serif;
+            font-size: 20px;
+            margin: 15px;
+            text-align: center;
+        }
+
+        #profileInfo h2 {
+            font-family: 'Satisfy', cursive;
+            background-color: #EBEBEB;
+            border-radius: 50px;
+            width: 375px;
+            text-align: center;
+            margin: 50px;
+            padding-bottom: 15px;
+
+        }
+
     </style>
 </head>
 <body>
@@ -80,11 +126,45 @@
         <ul id="listItems">
             <li><a th:href="@{/challenges/main}">Challenges</a></li>
             <li><a th:href="@{/resources}">Resources</a></li>
-            <li><form th:action="@{/logout}" th:method="post">
-                <button id="logout" class="btn-link btn">Logout</button>
-            </form></li>
+            <li>
+                <form th:action="@{/logout}" th:method="post">
+                    <button id="logout" class="btn-link btn">Logout</button>
+                </form>
+            </li>
         </ul>
     </div>
 </nav>
+<div id="profileBody">
+    <div id="profileHeader">
+        <h1>Profile</h1>
+    </div>
+    <div id="profileInfo" th:each="user:${user}">
+        <div id="firstName">
+            <h1>First Name</h1>
+            <h2 class="card" th:text="${user.firstName}"></h2>
+        </div>
+        <div id="lastName">
+            <h1>Last Name</h1>
+            <h2 class="card" th:text="${user.lastName}"></h2>
+        </div>
+        <div id="username">
+            <h1>Username</h1>
+            <h2 class="card" th:text="${user.username}"></h2>
+        </div>
+        <div id="email">
+            <h1>Email</h1>
+            <h2 class="card" th:text="${user.email}"></h2>
+        </div>
+    </div>
+    <div id="why">
+        <div id="whyHeader">
+            <h1>What’s your Why?</h1>
+            <p>Why are you saving? What is it that you’re saving for?</p>
+        </div>
+        <div id="whyBox"></div>
+        <div id="whyEdit"></div>
+        <div id="whyDelete"></div>
+    </div>
+</div>
 </body>
 </html>

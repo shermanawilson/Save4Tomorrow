@@ -2,6 +2,7 @@ package com.save4tomorrow.save4tomorrow.controllers;
 
 import com.save4tomorrow.save4tomorrow.models.User;
 import com.save4tomorrow.save4tomorrow.repositories.UserRepository;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -56,7 +57,10 @@ public class UserController {
     }
 
     @GetMapping("/profile")
-    public String viewProfile() {
+    public String viewProfile(Model model) {
+        User currentUserSession = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        System.out.println(currentUserSession);
+        model.addAttribute("user", userRepo.getById(currentUserSession.getId())); //gets user by session
         return "profile";
     }
 }
