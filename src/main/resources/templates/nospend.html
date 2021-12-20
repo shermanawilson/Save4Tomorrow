@@ -6,6 +6,10 @@
     <!--  Google Fonts  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -51,6 +55,7 @@
             color: black;
             text-decoration: none;
         }
+
         h1 {
             font-family: 'Sen', sans-serif;
         }
@@ -66,6 +71,48 @@
             align-items: center;
             margin-top: 0;
         }
+        #backgroundCard {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 800px;
+            background-color: #E5E5E5;
+            border-radius: 50px;
+
+        }
+
+        #spendHeader h1 {
+            font-family: 'Satisfy', cursive;
+            font-size: 48px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #spendHeader {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        #spendP {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        #spendP p {
+            font-family: 'Sen', sans-serif;
+            width: 60%;
+            font-size: 20px;
+        }
+        #spendBody {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
     </style>
 </head>
 <body>
@@ -80,11 +127,30 @@
         <ul id="listItems">
             <li><a th:href="@{/challenges/main}">Challenges</a></li>
             <li><a th:href="@{/resources}">Resources</a></li>
-            <li><form th:action="@{/logout}" th:method="post">
-                <button id="logout" class="btn-link btn">Logout</button>
-            </form></li>
+            <li>
+                <form th:action="@{/logout}" th:method="post">
+                    <button id="logout" class="btn-link btn">Logout</button>
+                </form>
+            </li>
         </ul>
     </div>
 </nav>
+<div id="spendBody">
+    <div id="spendHeader">
+        <h1>No Spend Challenge</h1>
+        <div id="spendP">
+            <img src="/pig.gif" alt="icon" width="100 px" height="100 px">
+            <p>The no spend challenge is designed to show you discipline in your spending and to highlight the positive
+                effects of saving!
+                Each week you can come here and jot down anything you see that you wanted to buy but didn’t and how much
+                it woudlv’e cost. At the end of the week you’ll be able to see how much you saved!
+            </p>
+        </div>
+    </div>
+    <div id="backgroundCard">
+
+    </div>
+    <h1>Total Saved: $141</h1>
+</div>
 </body>
 </html>
