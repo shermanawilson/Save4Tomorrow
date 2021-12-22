@@ -1,10 +1,10 @@
-// const YOUTUBE_API_KEY = "AIzaSyDcmQAqWFeD_Uoc9boc3X2kGpRDjO5uwTE";
+// const YOUTUBE_API_KEY = "AIzaSyAvK0vlvFQ_o11jqZ45-iFVaw_mCTY9H6Y";
 console.log("hello world")
 let playlistID
 let nextPageToken =""
 
 // function getVideos() {
-    fetch("https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=UCqP6K5GNGvQXSI10xNIAkxA&maxResults=50&order=date&key=https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=UCqP6K5GNGvQXSI10xNIAkxA&maxResults=50&order=date&key=AIzaSyDcmQAqWFeD_Uoc9boc3X2kGpRDjO5uwTE&pageToken=" +nextPageToken)
+    fetch("https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=UCaL8K8g8y8K4_CvNuN0BDtg&maxResults=10&order=date&key=AIzaSyAvK0vlvFQ_o11jqZ45-iFVaw_mCTY9H6Y&pageToken=" +nextPageToken)
         .then((result) => {
             return result.json()
         }).then((data) => {
@@ -16,7 +16,7 @@ let nextPageToken =""
             console.log(video.snippet.title)
             videoContainer.innerHTML += `
         <div id="youtubeContainer">
-        <img id="youtube" src="${video.snippet.thumbnails.default.url}">
+        <img id="youtube" src="${video.snippet.thumbnails.high.url}">
         <h3>${video.snippet.title}</h3>
         </div>
         `
