@@ -146,6 +146,7 @@
         #weather h1 {
             margin: 20px;
             font-family: 'Satisfy', cursive;
+            font-size: 32px;
         }
 
         #entry {
@@ -176,6 +177,10 @@
         #saved h1 {
             margin: 20px;
             font-family: 'Satisfy', cursive;
+        }
+
+        #currentWeather {
+            display: flex;
         }
     </style>
 </head>
@@ -219,7 +224,7 @@
     </div>
     <div id="weather">
         <h1>Today's Weather</h1>
-        <h1>75°</h1>
+        <h1 id="currentWeather"></h1>
     </div>
     <div id="entry">
         <h1>Today's Entry</h1>
@@ -230,5 +235,6 @@
         <h1>$75</h1>
     </div>
 </div>
+<script src="/weather.js"></script>
 </body>
 </html>
