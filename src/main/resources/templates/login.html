@@ -132,29 +132,34 @@
 
         form {
             margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
 
         @media screen and (min-width: 375px) {
-            body {
-            body {
-                display: block;
-                position: relative;
-                height: 100vh;
-            }
 
-            body::after {
-                content: "";
-                background-image: url("https://images.pexels.com/photos/4968663/pexels-photo-4968663.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
-                opacity: 15%;
-                top: 0;
-                left: 0;
-                bottom: 0;
-                right: 0;
-                position: absolute;
-                z-index: -1;
-                background-size: cover;
-                height: 100vh;
-            }
+            /*body {*/
+            /*    display: block;*/
+            /*    position: relative;*/
+            /*    height: 100vh;*/
+
+            /*}*/
+
+            /*body::after {*/
+            /*    content: "";*/
+            /*    background-image: url("https://images.pexels.com/photos/4968663/pexels-photo-4968663.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");*/
+            /*    opacity: 15%;*/
+            /*    top: 0;*/
+            /*    left: 0;*/
+            /*    bottom: 0;*/
+            /*    right: 0;*/
+            /*    position: absolute;*/
+            /*    z-index: -1;*/
+            /*    background-size: cover;*/
+            /*    height: 100vh;*/
+            /*}*/
 
             .container {
                 display: flex;
@@ -251,6 +256,10 @@
 
             form {
                 margin-top: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
             }
         }
     </style>
@@ -259,7 +268,7 @@
 <nav>
     <div id="navigationBody">
         <div class="logo">
-            <a th:href="/home">
+            <a th:href="@{/home}">
                 <img src="/logo.jpg" alt="logo" height="100px" width="150px">
             </a>
         </div>
