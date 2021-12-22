@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Resources</title>
+    <!--    <link href="/style.css" rel="stylesheet">-->
     <!--  Google Fonts Links  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -63,6 +64,20 @@
             font-size: 48px;
         }
 
+        h3 {
+            font-size: 40px;
+            font-family: 'GFS Neohellenic', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            color: #323232;
+            /*background-color: rgba(126, 225, 255, 0.53);*/
+            border-radius: 50px;
+            margin-left: 40px;
+
+        }
+
         nav {
             font-family: 'Satisfy', cursive;
         }
@@ -111,9 +126,36 @@
             width: 100px;
             /*background-color: #ff62fa;*/
         }
+
+        #youtubeContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+
+        }
+
+        #youtube {
+            display: flex;
+            border-radius: 50px;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+
+        }
+
+        .youtubeVideos {
+            background-color: #5a5a5a;
+        }
+
+        #youtube > img:hover {
+            background-color: #7fcffd;
+        }
     </style>
 </head>
 <body>
+<script src="/youtube.js"></script>
 <div class="container">
     <nav>
         <div id="navigationBody">
@@ -157,7 +199,12 @@
             nunc platea pretium iaculis nulla purus elementum a. Ornare morbi eu nec velit integer ante velit
             parturient. Gravida orci arcu eget diam sit eu, pretium lectus non. Orci phasellus et nullam dui cursus.</p>
     </div>
-    <div id="relatedVideos"><h1>Related Videos</h1></div>
+    <div id="relatedVideos">
+        <h1>Related Videos</h1>
+        <div class="youtubeVideos">
+
+        </div>
+    </div>
 </div>
 </body>
 </html>
