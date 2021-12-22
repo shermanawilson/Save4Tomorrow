@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Resources</title>
@@ -40,12 +40,14 @@
         }
 
         p {
-            display: grid;
+            display: flex;
             justify-content: center;
             align-items: center;
             font-family: 'GFS Neohellenic', sans-serif;
-            width: 65%;
+            width: 500px;
             font-size: 22px;
+            margin: 50px;
+            padding: 25px;
         }
 
         sub {
@@ -67,6 +69,10 @@
 
         #resourcesBody {
             display: grid;
+            justify-content: center;
+            align-items: center;
+            grid-template-rows: 600px 600px;
+            grid-template-columns: 600px 600px;
         }
 
         /* Nav Bar */
@@ -112,15 +118,15 @@
     <nav>
         <div id="navigationBody">
             <div class="logo">
-                <a href="#">
+                <a th:href="@{/home}">
                     <img src="/logo.jpg"
                          alt="logo" height="100px" width="150px">
                 </a>
             </div>
             <ul id="listItems">
-                <li><a href="/home">Home</a></li>
-                <li><a href="/login">Login</a></li>
-                <li><a href="/register">Register</a></li>
+                <li><a th:href="/home">Home</a></li>
+                <li><a th:href="/login">Login</a></li>
+                <li><a th:href="/register">Register</a></li>
             </ul>
         </div>
     </nav>
