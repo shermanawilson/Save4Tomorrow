@@ -24,13 +24,10 @@
             width: 100px;
             height: 45px;
             font-size: 24px;
+            cursor: pointer;
 
         }
 
-        h1 {
-            font-family: 'Marck Script', cursive;
-
-        }
 
         h2 {
             font-family: 'Open Sans Condensed', sans-serif;
@@ -40,6 +37,10 @@
 
         #challengesHeader {
             margin-bottom: 50px;
+        }
+
+        #challengesHeader h1 {
+            font-family: 'Marck Script', cursive;
         }
 
         #weekChallenge {
@@ -53,6 +54,10 @@
             align-items: center;
         }
 
+        #weekChallenge h1 {
+            font-family: 'Marck Script', cursive;
+        }
+
         #weatherChallenge {
             background-color: #ffe6fd;
             width: 600px;
@@ -62,6 +67,10 @@
             display: flex;
             justify-content: space-around;
             align-items: center;
+        }
+
+        #weatherChallenge h1 {
+            font-family: 'Marck Script', cursive;
         }
 
         #noSpendChallenge {
@@ -75,6 +84,11 @@
             align-items: center;
         }
 
+        #noSpendChallenge h1 {
+            font-family: 'Marck Script', cursive;
+        }
+
+
         #bingoChallenge {
             background-color: #ffe6fd;
             width: 600px;
@@ -84,6 +98,10 @@
             display: flex;
             justify-content: space-around;
             align-items: center;
+        }
+
+        #bingoChallenge h1 {
+            font-family: 'Marck Script', cursive;
         }
 
         #title {
@@ -96,57 +114,73 @@
 
         /*!* Nav Bar *!*/
 
-        /*#listItems {*/
-        /*    list-style: none;*/
-        /*    font-family: 'Poiret One', cursive;*/
-        /*    display: flex;*/
-        /*    width: 35%;*/
-        /*    justify-content: space-around;*/
-        /*    !*background-color: #d0cfcf;*!*/
-        /*    letter-spacing: 2px;*/
-        /*    font-size: 18px;*/
-        /*    cursor: pointer;*/
+        #listItems {
+            list-style: none;
+            font-family: 'Poiret One', cursive;
+            display: flex;
+            width: 35%;
+            justify-content: space-between;
+            /*background-color: #d0cfcf;*/
+            letter-spacing: 2px;
+            font-size: 18px;
+            cursor: pointer;
+            align-items: center;
 
-        /*}*/
+        }
 
-        /*#navigationBody {*/
-        /*    display: flex;*/
-        /*    justify-content: space-around;*/
-        /*    align-items: center;*/
-        /*    min-height: 10vh;*/
-        /*    padding: 0;*/
-        /*    margin: 0;*/
-        /*    box-sizing: border-box;*/
-        /*    !*background-color: #7fcffd;*!*/
-        /*    width: 100vw;*/
+        #listItems a {
+            text-decoration: none;
+        }
 
-        /*}*/
+        #navigationBody {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            min-height: 10vh;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            /*background-color: #7fcffd;*/
+            width: 100vw;
 
-        /*.logo {*/
+
+        }
+
+        .logo {
+            height: 100px;
+            width: 100px;
+            background-color: #ff62fa;
+        }
+
+        #listItems a {
+            color: black;
+            list-style: none;
+        }
+
+        h1 {
+            font-family: 'Sen', sans-serif;
+        }
+
+        #logout {
+            outline: none;
+            border: transparent;
+            background-color: white;
+            font-family: 'Poiret One', cursive;
+            font-size: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 0;
+        }
+        #listItems a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /*#logo img{*/
         /*    height: 100px;*/
-        /*    width: 100px;*/
-        /*    !*background-color: #ff62fa;*!*/
-        /*}*/
-
-        /*#listItems a {*/
-        /*    color: black;*/
-        /*    text-decoration: none;*/
-        /*}*/
-
-        /*h1 {*/
-        /*    font-family: 'Sen', sans-serif;*/
-        /*}*/
-
-        /*#logout {*/
-        /*    outline: none;*/
-        /*    border: transparent;*/
-        /*    background-color: white;*/
-        /*    font-family: 'Poiret One', cursive;*/
-        /*    font-size: 18px;*/
-        /*    display: flex;*/
-        /*    justify-content: center;*/
-        /*    align-items: center;*/
-        /*    margin-top: 0;*/
+        /*    width: 150px;*/
         /*}*/
     </style>
 
@@ -174,7 +208,7 @@
     <div id="navigationBody">
         <div class="logo">
             <a th:href="@{/home}">
-                <img src="/logo.jpg" alt="logo" height="100px" width="150px">
+                <img id="logoImg" src="/logo.jpg" alt="logo" width="150px" height="100px">
             </a>
         </div>
         <ul id="listItems">

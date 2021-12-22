@@ -34,6 +34,7 @@
             position: absolute;
             z-index: -1;
             background-size: cover;
+            height: 100vh;
         }
 
         .container {
@@ -84,6 +85,7 @@
             font-family: 'Mr Dafoe', cursive;
             font-size: 48px;
         }
+
         #listItems {
             list-style: none;
             font-family: 'Poiret One', cursive;
@@ -111,6 +113,7 @@
             box-sizing: border-box;
             /*background-color: #7fcffd;*/
         }
+
         #listItems a {
             color: black;
             text-decoration: none;
@@ -129,6 +132,126 @@
 
         form {
             margin-top: 40px;
+        }
+
+        @media screen and (min-width: 375px) {
+            body {
+            body {
+                display: block;
+                position: relative;
+                height: 100vh;
+            }
+
+            body::after {
+                content: "";
+                background-image: url("https://images.pexels.com/photos/4968663/pexels-photo-4968663.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+                opacity: 15%;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                position: absolute;
+                z-index: -1;
+                background-size: cover;
+                height: 100vh;
+            }
+
+            .container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                width: 100%;
+                font-family: 'Manjari', sans-serif;
+                height: 100%;
+            }
+
+            input {
+                border-radius: 50px;
+                background-color: #d0cfcf;
+                outline: none;
+                border: transparent;
+                padding-bottom: 15px;
+                text-align: center;
+                align-items: center;
+                margin: 50px;
+                height: 20px;
+                width: 200px;
+
+            }
+
+            label {
+                display: flex;
+                justify-content: center;
+                text-align: center;
+            }
+
+            #btn {
+                display: flex;
+                justify-content: center;
+                border-radius: 50px;
+                width: 100px;
+                background-color: #7ee1ff;
+                outline: none;
+                border: transparent;
+                padding-bottom: 15px;
+                text-align: center;
+                align-items: center;
+                margin-top: 5px;
+            }
+
+            h1 {
+                font-family: 'Mr Dafoe', cursive;
+                font-size: 48px;
+            }
+
+            #listItems {
+                list-style: none;
+                font-family: 'Poiret One', cursive;
+                display: flex;
+                width: 35%;
+                justify-content: space-around;
+                /*background-color: #d0cfcf;*/
+                letter-spacing: 2px;
+                font-size: 18px;
+                cursor: pointer;
+
+            }
+
+            #listItems > a {
+                font-family: 'Poiret One', cursive;
+            }
+
+            #navigationBody {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                min-height: 10vh;
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+                /*background-color: #7fcffd;*/
+            }
+
+            #listItems a {
+                color: black;
+                text-decoration: none;
+            }
+
+            .logo {
+                height: 100px;
+                width: 100px;
+                /*background-color: #ff62fa;*/
+            }
+
+            a {
+                text-decoration: none;
+                color: #86d1ff;
+            }
+
+            form {
+                margin-top: 40px;
+            }
         }
     </style>
 </head>
