@@ -21,6 +21,7 @@
             display: block;
             position: relative;
             height: 100vh;
+            margin: 0;
         }
 
         body::after {
@@ -35,6 +36,7 @@
             z-index: -1;
             background-size: cover;
             height: 100vh;
+            margin: 0;
         }
 
         .container {
@@ -45,6 +47,7 @@
             width: 100%;
             font-family: 'Manjari', sans-serif;
             height: 100%;
+            margin: 0;
         }
 
         input {
@@ -275,7 +278,7 @@
         <ul id="listItems">
             <li><a th:href="@{/home}">Home</a></li>
             <li><a th:href="@{/resources}">Resources</a></li>
-            <li><a th:href="@{/register}">Register</a></li>
+            <li><a th:href="@{/challenges/main}">Challenges</a></li>
         </ul>
     </div>
 </nav>
