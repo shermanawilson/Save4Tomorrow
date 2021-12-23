@@ -6,6 +6,10 @@
     <!--  Google Fonts  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -81,6 +85,7 @@
             width: 70%;
             margin-bottom: 50px;
         }
+
         /* Nav Bar */
 
         #listItems {
@@ -119,6 +124,7 @@
             color: black;
             text-decoration: none;
         }
+
         h1 {
             font-family: 'Sen', sans-serif;
         }
@@ -135,6 +141,44 @@
             margin-top: 0;
         }
 
+        /*  What's Your Why  */
+        #whyHeader h1 {
+            font-family: 'Satisfy', cursive;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #whyHeader p {
+            text-align: center;
+            font-size: 20px;
+            font-family: 'Quicksand', sans-serif;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            color: #4c4c4c;
+        }
+
+        #whyBox {
+            background-color: #DCF7FF;
+            border-radius: 50px;
+            height: 200px;
+            width: 75%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+            margin-left: 150px;
+        }
+        hr {
+            opacity: 35%;
+            margin-bottom: 50px;
+            margin-top: 50px;
+            width: 50%;
+        }
+
     </style>
 </head>
 <body>
@@ -149,9 +193,11 @@
         <ul id="listItems">
             <li><a th:href="@{/challenges/main}">Challenges</a></li>
             <li><a th:href="@{/profile}">Profile</a></li>
-            <li><form th:action="@{/logout}" th:method="post">
-                <button id="logout" class="btn-link btn">Logout</button>
-            </form></li>
+            <li>
+                <form th:action="@{/logout}" th:method="post">
+                    <button id="logout" class="btn-link btn">Logout</button>
+                </form>
+            </li>
         </ul>
     </div>
 </nav>
@@ -159,7 +205,8 @@
     <div id="bingoHeader">
         <h1>Money Saving Blackout Bingo</h1>
         <div id="bingoP">
-            <img src="https://img.icons8.com/external-justicon-lineal-justicon/64/000000/external-lottery-gambling-justicon-lineal-justicon.png" alt="bing icon" style="margin-right: 50px">
+            <img src="https://img.icons8.com/external-justicon-lineal-justicon/64/000000/external-lottery-gambling-justicon-lineal-justicon.png"
+                 alt="bing icon" style="margin-right: 50px">
             <p>The Money Saving Blackout Bingo Challenge is a favorite because who doesn’t love bingo! The name of the
                 game
                 here is to each [day, week or month] save whatever the amount is on the card you chose!
@@ -203,6 +250,16 @@
         </div>
     </div>
     <h1>Total Saved: $52</h1>
+</div>
+<hr>
+<div id="why">
+    <div id="whyHeader">
+        <h1>What’s your Why?</h1>
+        <p>Why are you saving? What is it that you’re saving for?</p>
+    </div>
+    <div id="whyBox"></div>
+    <div id="whyEdit"></div>
+    <div id="whyDelete"></div>
 </div>
 </body>
 </html>
