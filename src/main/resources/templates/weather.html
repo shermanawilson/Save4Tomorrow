@@ -61,7 +61,7 @@
     </div>
     <div id="date">
         <h1>Today's Date</h1>
-        <h1>12/20/2021</h1>
+        <h1 id="theDate"></h1>
     </div>
     <div id="weather">
         <h1>Today's Weather</h1>
@@ -85,7 +85,7 @@
     </div>
     <div id="whyBox">
         <form th:method="post" th:action="@{/why}" th:object="${why}">
-            <input type="text" th:field="">
+<!--            <input type="text" th:field="">-->
         </form>
     </div>
     <div id="whyEdit"></div>
