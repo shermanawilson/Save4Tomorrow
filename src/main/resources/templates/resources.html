@@ -45,15 +45,16 @@
             justify-content: center;
             align-items: center;
             font-family: 'GFS Neohellenic', sans-serif;
-            width: 500px;
-            font-size: 22px;
+            width: 600px;
+            font-size: 24px;
             margin: 50px;
             padding: 25px;
+            text-align: center;
         }
 
         sub {
             font-size: 24px;
-            font-family: 'Over the Rainbow', cursive;+
+            font-family: 'Over the Rainbow', cursive;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -62,19 +63,24 @@
         h1 {
             font-family: 'Satisfy', cursive;
             font-size: 48px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 50px;
         }
 
         h3 {
-            font-size: 40px;
+            font-size: 25px;
             font-family: 'GFS Neohellenic', sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 50%;
+            width: 80%;
             color: #323232;
             /*background-color: rgba(126, 225, 255, 0.53);*/
             border-radius: 50px;
             margin-left: 40px;
+            text-align: center;
 
         }
 
@@ -87,7 +93,7 @@
             justify-content: center;
             align-items: center;
             grid-template-rows: 600px 600px;
-            grid-template-columns: 600px 600px;
+            grid-template-columns: 600px 600px 600px;
         }
 
         /* Nav Bar */
@@ -132,6 +138,8 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            width: border-box;
+            margin: 50px;
 
 
         }
@@ -145,13 +153,20 @@
 
         }
 
-        .youtubeVideos {
-            /*background-color: #ccf3ff;*/
-            border-radius: 50px;
-        }
+
 
         #youtube img:hover {
             background-color: #7fcffd;
+        }
+
+        .youtubeVideos {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            grid-template-columns: 450px 450px 450px 450px;
+            grid-template-rows: 450px 450px 450px 450px;
+            border-radius: 50px;
+
         }
     </style>
 </head>
@@ -178,9 +193,8 @@
     </div>
     <div id="resourcesBody">
         <img class="img"
-             src="https://images.pexels.com/photos/4968393/pexels-photo-4968393.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
-             alt="finances" width="600px" height="400px">
-        <sub>Savings</sub>
+             src="https://thumbs.gfycat.com/CaringAntiqueGuppy-max-1mb.gif"
+             alt="finances" width="300px" height="200px" style="{display: flex}">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vulputate volutpat vitae cras leo tempus non nisl.
             Dignissim id quis sed posuere arcu. Porttitor mattis tortor neque morbi tellus risus. Aenean turpis neque mi
             in mauris volutpat nulla nam. Est phasellus tortor ut neque. Velit leo nec cursus penatibus pellentesque
@@ -188,10 +202,7 @@
             aliquet turpis. Quam montes, ultricies sed egestas eu libero augue. Turpis imperdiet mauris ullamcorper sed
             faucibus scelerisque. Eleifend elementum ut rhoncus integer aliquet leo. Id in porta amet, id facilisis
             maecenas. At nec lorem a non purus ut diam turpis. Posuere tristique quam eu venenatis diam et.</p>
-        <img class="img"
-             src="https://images.pexels.com/photos/5466785/pexels-photo-5466785.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-             alt="saving">
-        <sub>Finances</sub>
+        <sub>Saving's</sub>
         <p>Aenean at at tellus donec vulputate. Suspendisse malesuada elementum sodales enim aliquam sit ut. Massa
             ullamcorper volutpat sagittis luctus integer purus. Nec ut ultrices lacus, laoreet aliquam eget. Nisi id
             enim nec maecenas. Ut semper ultrices libero sit in molestie vulputate malesuada. Commodo vitae ante semper
@@ -199,12 +210,18 @@
             suspendisse faucibus pulvinar aliquam sed. Ac viverra mollis eleifend in elit porttitor dolor at. Diam nunc
             nunc platea pretium iaculis nulla purus elementum a. Ornare morbi eu nec velit integer ante velit
             parturient. Gravida orci arcu eget diam sit eu, pretium lectus non. Orci phasellus et nullam dui cursus.</p>
-    </div>
-    <div id="relatedVideos">
-        <div class="youtubeVideos">
-            <h1>Related Videos</h1>
+        <sub>Finances</sub>
+        <img class="img"
+             src="https://media4.giphy.com/media/26u4lKxbJacRqUr1m/giphy.gif"
+             alt="saving" width="300px" height="200px">
 
-        </div>
+    </div>
+</div>
+<div id="relatedVideos">
+    <h1>Related Videos</h1>
+    <div class="youtubeVideos">
+
+
     </div>
 </div>
 </body>
