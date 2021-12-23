@@ -1,11 +1,18 @@
 package com.save4tomorrow.save4tomorrow.controllers;
 
+import com.save4tomorrow.save4tomorrow.models.User;
+import com.save4tomorrow.save4tomorrow.models.Why;
+import com.save4tomorrow.save4tomorrow.repositories.UserRepository;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class ChallengesController {
+    private UserRepository userRepo;
+
     @GetMapping("/challenges/main")
     public String mainChallengesView() {
         return "challenges";
@@ -22,7 +29,11 @@ public class ChallengesController {
     }
 
     @GetMapping("/challenges/weather")
-    public String weatherChallengeView() {
+    public String weatherChallengeView(Model model) {
+        User currentUserSession = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        model.addAttribute("why", userRepo.getById(currentUserSession.getId()));
+        model.addAttribute("why", new Why());
+        //reference description by owner
         return "weather";
     }
 
