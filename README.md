@@ -1,2 +1,2 @@
 # Save4Tomorrow
-<img src="https://img.icons8.com/material-outlined/24/000000/money-box--v2.png" style="color:white"/>
+<img src="https://static.wixstatic.com/media/4cb115_19b160b2e80b457894cec33381e00e99~mv2.gif"/>
