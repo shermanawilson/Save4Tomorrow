@@ -69,7 +69,12 @@
             <h1>What’s your Why?</h1>
             <p>Why are you saving? What is it that you’re saving for?</p>
         </div>
-        <div id="whyBox"></div>
+        <div id="whyBox">
+            <form th:method="post" th:action="@{/why/profile}" th:object="${why}">
+                <input type="text" id="whyText" th:field="${why.description}">
+                <button type="submit" id="profileWhyButton">Let's Do This!</button>
+            </form>
+        </div>
         <div id="whyEdit"></div>
         <div id="whyDelete"></div>
     </div>

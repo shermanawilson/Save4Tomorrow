@@ -19,7 +19,7 @@ public class Why {
     @Setter
     private Long id;
 
-    @Column(nullable = false,  columnDefinition = "TEXT")
+    @Column(nullable = true,  columnDefinition = "TEXT")
     @Getter
     @Setter
     private String description;

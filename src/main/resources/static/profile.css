@@ -116,4 +116,25 @@ h1 {
     align-items: center;
     margin-top: 50px;
     margin-left: 150px;
+    position: relative;
+}
+
+#whyText{
+    background-color: #ffa4d4;
+    border-radius: 50px;
+    height: 100px;
+    border: transparent;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    padding-top: 50px;
+    margin-left: 150px;
+    margin-top: 150px;
+}
+#profileWhyButton{
+    display: flex;
+    justify-content: right;
+    align-items: center;
 }
