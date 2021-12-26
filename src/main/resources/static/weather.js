@@ -68,3 +68,8 @@ let mo = new Intl.DateTimeFormat('en', { month: 'short' }).format(date);
 let ye = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(date);
 const dateText = document.querySelector("#theDate");
 dateText.innerHTML = `${mo}-${da}-${ye}`;
+
+let total = "";
+function bingoTotal() {
+
+}
