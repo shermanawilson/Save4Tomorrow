@@ -69,7 +69,19 @@ let ye = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(date);
 const dateText = document.querySelector("#theDate");
 dateText.innerHTML = `${mo}-${da}-${ye}`;
 
-let total = "";
-function bingoTotal() {
 
+let total = "";
+let tiles = document.querySelector(".bingoTile");
+let totalArray = [
+    [52, 52, 52, 52, 52],
+    [52, 52, 52, 52, 52],
+    [52, 52, 0, 52, 52],
+    [52, 52, 52, 52, 52],
+    [52, 52, 52, 52, 52]
+    ]
+function bingoTotal() {
+    const tile1 = document.querySelector("#1");
+    if(tiles == tile1.innerHTML.valueOf()){
+        tile1.style.backgroundColor = "green"
+    }
 }
