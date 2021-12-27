@@ -23,6 +23,7 @@ function getWeather(latitude, longitude) {
 }
 
 todayEntry.innerHTML = `$${weather.temperature.value}`
+// if(todayEntry == null) {displayWeather()}
 
 if ('geolocation' in navigator) {
     navigator.geolocation.getCurrentPosition(setPosition, showError);
