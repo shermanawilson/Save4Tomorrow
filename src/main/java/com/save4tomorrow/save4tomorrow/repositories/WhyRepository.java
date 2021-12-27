@@ -5,6 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface WhyRepository extends JpaRepository<Why, Long> {
 
-    Why getWhyById(String id);
+    String getWhyById(Long id);
     Why getWhyByDescription(String description);
 }

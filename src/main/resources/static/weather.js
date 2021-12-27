@@ -1,6 +1,7 @@
 const WEATHER_API_KEY = "af490826bd781f8c6df4775c5164833f";
 const KELVIN = 273
 let currentWeather = document.querySelector("#currentWeather")
+let todayEntry = document.querySelector("#todayEntry")
 const notificationElement = document.querySelector("#notification")
 const weather = {}
 
@@ -20,6 +21,8 @@ function getWeather(latitude, longitude) {
         displayWeather();
     })
 }
+
+todayEntry.innerHTML = `$${weather.temperature.value}`
 
 if ('geolocation' in navigator) {
     navigator.geolocation.getCurrentPosition(setPosition, showError);
@@ -54,34 +57,49 @@ currentWeather.addEventListener("click", function () {
     if (weather.temperature.unit == "celsius") {
         let fahrenheit = celsiusToFahrenheit(weather.temperature.value);
         fahrenheit = Math.floor(fahrenheit);
-        currentWeather.innerHTML = `${weather.temperature.value}°F`;
+        currentWeather.innerHTML = `${fahrenheit}°F`;
         weather.temperature.unit = "fahrenheit"
-    } else{
+    } else {
         currentWeather.innerHTML = `${weather.temperature.value}°C`;
         weather.temperature.unit = "celsius"
     }
 })
 
+// todayEntry.addEventListener("click", function () {
+//     if (weather.temperature.value === undefined) return;
+//
+//     if (weather.temperature.unit == "celsius") {
+//         let fahrenheit = celsiusToFahrenheit(weather.temperature.value);
+//         fahrenheit = Math.floor(fahrenheit);
+//         todayEntry.innerHTML = `${fahrenheit}°F`;
+//         weather.temperature.unit = "fahrenheit"
+//     } else {
+//         todayEntry.innerHTML = `${weather.temperature.value}°C`;
+//         weather.temperature.unit = "celsius"
+//     }
+// })
+
 let date = new Date();
-let da = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(date);
-let mo = new Intl.DateTimeFormat('en', { month: 'short' }).format(date);
-let ye = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(date);
+let da = new Intl.DateTimeFormat('en', {day: '2-digit'}).format(date);
+let mo = new Intl.DateTimeFormat('en', {month: 'short'}).format(date);
+let ye = new Intl.DateTimeFormat('en', {year: 'numeric'}).format(date);
 const dateText = document.querySelector("#theDate");
 dateText.innerHTML = `${mo}-${da}-${ye}`;
 
 
-let total = "";
-let tiles = document.querySelector(".bingoTile");
-let totalArray = [
-    [52, 52, 52, 52, 52],
-    [52, 52, 52, 52, 52],
-    [52, 52, 0, 52, 52],
-    [52, 52, 52, 52, 52],
-    [52, 52, 52, 52, 52]
-    ]
-function bingoTotal() {
-    const tile1 = document.querySelector("#1");
-    if(tiles == tile1.innerHTML.valueOf()){
-        tile1.style.backgroundColor = "green"
-    }
-}
+// Bingo Javascript
+// let total = "";
+// let tiles = document.querySelector(".bingoTile");
+// let totalArray = [
+//     [52, 52, 52, 52, 52],
+//     [52, 52, 52, 52, 52],
+//     [52, 52, 0, 52, 52],
+//     [52, 52, 52, 52, 52],
+//     [52, 52, 52, 52, 52]
+//     ]
+// function bingoTotal() {
+//     const tile1 = document.querySelector("#1");
+//     if(tiles == tile1.innerHTML.valueOf()){
+//         tile1.style.backgroundColor = "green"
+//     }
+// }
