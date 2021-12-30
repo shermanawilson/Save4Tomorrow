@@ -115,3 +115,27 @@ hr {
     margin-top: 50px;
     width: 50%;
 }
+
+#header52 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 50px;
+    background-color: #FFE4F8;
+    margin-bottom: 50px;
+}
+
+#header52 > h1 {
+    font-family: 'GFS Neohellenic', sans-serif;
+    font-size: 28px;
+}
+
+#added {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background-color: #EEEEEE;
+    height: 800px;
+
+}

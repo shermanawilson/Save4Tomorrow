@@ -51,7 +51,7 @@ public class WhyController {
         return getString(id, why);
     }
 
-    private String getString(@PathVariable Long id, @ModelAttribute Why why) {
+    public String getString(@PathVariable Long id, @ModelAttribute Why why) {
         User currentUser = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         whyRepo.save(why);
 
