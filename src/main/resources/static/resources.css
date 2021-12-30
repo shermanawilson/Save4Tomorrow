@@ -144,3 +144,10 @@ nav {
     border-radius: 50px;
 
 }
+
+#relatedVideosP{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
