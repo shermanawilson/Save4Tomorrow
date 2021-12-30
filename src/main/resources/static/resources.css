@@ -69,7 +69,8 @@ nav {
     justify-content: center;
     align-items: center;
     grid-template-rows: 600px 600px;
-    grid-template-columns: 600px 600px 600px;
+    grid-template-columns: 600px 600px;
+    width: 748px;
 }
 
 /* Nav Bar */
