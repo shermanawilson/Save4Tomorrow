@@ -66,19 +66,20 @@ currentWeather.addEventListener("click", function () {
     }
 })
 
-// todayEntry.addEventListener("click", function () {
-//     if (weather.temperature.value === undefined) return;
-//
-//     if (weather.temperature.unit == "celsius") {
-//         let fahrenheit = celsiusToFahrenheit(weather.temperature.value);
-//         fahrenheit = Math.floor(fahrenheit);
-//         todayEntry.innerHTML = `${fahrenheit}°F`;
-//         weather.temperature.unit = "fahrenheit"
-//     } else {
-//         todayEntry.innerHTML = `${weather.temperature.value}°C`;
-//         weather.temperature.unit = "celsius"
-//     }
-// })
+let fahrenheit = celsiusToFahrenheit(weather.temperature.value);
+fahrenheit = Math.floor(fahrenheit);
+todayEntry.innerHTML = `Click To See`;
+
+todayEntry.addEventListener("click", function () {
+    if (weather.temperature.value === undefined) return;
+
+    if (weather.temperature.unit == "celsius") {
+        let fahrenheit = celsiusToFahrenheit(weather.temperature.value);
+        fahrenheit = Math.floor(fahrenheit);
+        todayEntry.innerHTML = `$${fahrenheit}`;
+        weather.temperature.unit = "fahrenheit"
+    }
+})
 
 let date = new Date();
 let da = new Intl.DateTimeFormat('en', {day: '2-digit'}).format(date);

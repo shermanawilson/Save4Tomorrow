@@ -56,25 +56,33 @@
             <img src="/light.gif" alt="light" height="75px" width="75px">
             <p>The Weather Saving’s Challenge is a fun and random challenge because the amount of money you save is
                 based off of the temperature of that day you chose!
-                Pick a day of the week you want to start, then come and track how much your savings grow!</p>
+                Pick a day of the week you want to start, then come and track how much your savings grow!<br>
+                <br>Everytime you come to this challenge, once today's weather loads, you can either choose the °C temp
+                which
+                will appear first or you can click on it to change it to °F degrees to save that amount!<br>
+                <br>For today's entry, once you click on it after the weather is displayed above it, it will display the
+                dollar
+                amount in °F! Everytime you come you'll only need to update your total amount saved!</p>
         </div>
     </div>
-    <div id="date">
-        <h1>Today's Date</h1>
-        <h1 id="theDate"></h1>
-    </div>
-    <div id="weather">
-        <h1>Today's Weather</h1>
-        <h1 id="currentWeather"></h1>
-        <p id="notification"></p>
-    </div>
-    <div id="entry">
-        <h1>Today's Entry</h1>
-        <h1 id="todayEntry"></h1>
-    </div>
-    <div id="saved">
-        <h1>Total Saved</h1>
-        <h1>$75</h1>
+    <div id="challengesCards">
+        <div id="date">
+            <h1>Today's Date</h1>
+            <h1 id="theDate"></h1>
+        </div>
+        <div id="weather">
+            <h1>Today's Weather</h1>
+            <h1 id="currentWeather"></h1>
+            <p id="notification"></p>
+        </div>
+        <div id="entry">
+            <h1>Today's Entry</h1>
+            <h1 id="todayEntry"></h1>
+        </div>
+        <div id="saved">
+            <h1>Total Saved</h1>
+            <h1>$75</h1>
+        </div>
     </div>
 </div>
 <hr>
@@ -85,7 +93,7 @@
     </div>
     <div id="whyBox">
         <form th:method="post" th:action="@{/why}" th:object="${why}">
-<!--            <input type="text" th:field="">-->
+            <!--            <input type="text" th:field="">-->
         </form>
     </div>
     <div id="whyEdit"></div>

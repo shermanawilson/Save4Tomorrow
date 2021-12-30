@@ -131,3 +131,22 @@ hr {
     margin-top: 50px;
     width: 50%;
 }
+
+#descriptionHeader {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 50px;
+    background-color: #FFD2F3;
+    width: 725px;
+    height: 65px;
+}
+
+#descriptionHeader > h1 {
+    font-family: 'Sen', sans-serif;
+    font-size: 23px;
+}
+#addItemButton {
+    border: transparent;
+    background-color: #E5E5E5;
+}
