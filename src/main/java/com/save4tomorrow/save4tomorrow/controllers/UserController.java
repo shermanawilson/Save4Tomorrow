@@ -22,7 +22,7 @@ public class UserController {
         this.passwordEncoder = passwordEncoder;
     }
 
-    @GetMapping("/home")
+    @GetMapping("/")
     public String homeView() {
         return "home";
     }
