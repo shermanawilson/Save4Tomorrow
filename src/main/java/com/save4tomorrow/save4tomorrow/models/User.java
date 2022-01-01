@@ -44,6 +44,10 @@ public class User {
     @Setter
     private String password;
 
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
+    private List<Why> why;
+
+
 
     public User(User copy){
 

@@ -25,6 +25,7 @@ public class Why {
     private String description;
 
     @ManyToOne
+    @JoinColumn (name = "user_id")
     @Getter
     @Setter
     private User user;

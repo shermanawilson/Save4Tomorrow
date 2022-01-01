@@ -1,6 +1,7 @@
 package com.save4tomorrow.save4tomorrow.controllers;
 
 import com.save4tomorrow.save4tomorrow.models.User;
+import com.save4tomorrow.save4tomorrow.models.Why;
 import com.save4tomorrow.save4tomorrow.repositories.UserRepository;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
