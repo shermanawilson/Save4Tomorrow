@@ -32,8 +32,8 @@ public class ChallengesController {
     public String weatherChallengeView(Model model) {
         User currentUserSession = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         model.addAttribute("why", userRepo.getById(currentUserSession.getId()));
-        model.addAttribute("why", new Why());
-        //reference description by owner
+        //model.addAttribute("why", new Why());
+        //reference description by ow
         return "weather";
     }
 
